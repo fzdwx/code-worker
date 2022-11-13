@@ -16,6 +16,7 @@ export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(
     vscode.commands.registerCommand(setSelectionCmd, setSelectionHandle)
   );
+
 }
 
 // This method is called when your extension is deactivated
