@@ -17,4 +17,3 @@ repo: <https://github.com/fzdwx/code-worker>
     - go
 
 **Enjoy!**
-

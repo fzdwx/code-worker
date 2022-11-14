@@ -36,7 +36,7 @@ export class CodeAction implements vscode.CodeActionProvider {
     // 当 line 不为空白 且 startWith != prefix 时才添加补全
     if (!line.isEmptyOrWhitespace) {
       const prefix = langToExValPrefix();
-      if (!line.text.trimStart().startsWith(prefix)) {
+      if (!line.text.trimStart().startsWith(prefix) || existLang(["python"])) {
         arr.push(this.extractVal(document, range, line, prefix));
       }
     }
