@@ -2,7 +2,7 @@
   "name": "code-worker",
   "displayName": "code-worker",
   "description": "helper code. quick fix,extract variables...",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "fzdwx",
   "repository": {
     "url": "https://github.com/fzdwx/code-worker"
@@ -20,7 +20,8 @@
     "onLanguage:go",
     "onLanguage:javascript",
     "onLanguage:typescript",
-    "onLanguage:java"
+    "onLanguage:java",
+    "onLanguage:c"
   ],
   "main": "./out/extension.js",
   "contributes": {

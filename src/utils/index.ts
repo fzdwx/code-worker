@@ -37,7 +37,7 @@ export function langToExValPrefix() {
     case "rust":
       return "let";
     case "javascript":
-    case "typescript:":
+    case "typescript":
       return "const";
     case "go":
       return "var";
