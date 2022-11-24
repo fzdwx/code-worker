@@ -10,10 +10,20 @@ repo: <https://github.com/fzdwx/code-worker>
    - rust
 
 2. extract variables
-    - java
-    - rust
-    - javascript
-    - typescript
-    - go
+   - java
+   - rust
+   - javascript
+   - typescript
+   - go
+3. postfix
+   - ref -> ${expr}.ref -> &${expr}
+   - ret -> ${expr}.ret -> retrun ${expr}
+   - go:
+     - fori
+     - forr
+     - if
+     - len
+   - rust:
+     - ok
 
 **Enjoy!**

@@ -4,7 +4,19 @@ All notable changes to the "code-worker" extension will be documented in this fi
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
-## 0.0.4 - 2022/11/23
+## 0.0.6 - 2022/11/24
+
+1.support more postfix
+2.add quick template
+
+## 0.0.5 - 2022/11/24
+
+simple postfix:
+
+- ref -> ${expr}.ref -> &${expr}
+- ret -> ${expr}.ret -> retrun ${expr}
+
+## 0.0.4   - 2022/11/23
 
 1. fix typescript extractVal
 2. support c

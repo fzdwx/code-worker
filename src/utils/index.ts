@@ -45,3 +45,12 @@ export function langToExValPrefix() {
 
   return "";
 }
+
+export const getIndentCharacters = () => {
+  if (vscode.window.activeTextEditor?.options.insertSpaces) {
+    return " ".repeat(vscode.window.activeTextEditor.options.tabSize as number);
+  } else {
+    return "\t";
+  }
+};
+export const indent = getIndentCharacters;
