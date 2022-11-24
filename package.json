@@ -27,8 +27,8 @@
   "contributes": {
     "commands": [
       {
-        "command": "code-worker.helloWorld",
-        "title": "Hello World"
+        "command": "showCurrentWord",
+        "title": "showCurrentWord"
       }
     ]
   },

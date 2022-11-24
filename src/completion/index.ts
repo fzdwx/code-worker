@@ -15,6 +15,7 @@ export function loadPostfixCmp(lang: string) {
   provider.push(new RefTmp());
   provider.push(new RetTmp());
   provider.push(...quickTemplates);
+
   return provider;
 }
 
