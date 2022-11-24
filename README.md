@@ -26,4 +26,5 @@ repo: <https://github.com/fzdwx/code-worker>
    - rust:
      - ok
 
+![qwe](./show.gif)
 **Enjoy!**
