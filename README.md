@@ -23,8 +23,12 @@ repo: <https://github.com/fzdwx/code-worker>
      - forr
      - if
      - len
-   - rust:
+   - rust
      - ok
+4. hugo preview
+   - require:`browse-lite`
+   - add config:
+     `"browse-lite.chromeExecutable": "/usr/bin/google-chrome-stable",`
 
 ![qwe](./show.gif)
 

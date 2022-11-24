@@ -2,7 +2,7 @@
   "name": "code-worker",
   "displayName": "code-worker",
   "description": "helper code. quick fix,extract variables...",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "publisher": "fzdwx",
   "repository": {
     "url": "https://github.com/fzdwx/code-worker"
@@ -21,14 +21,33 @@
     "onLanguage:javascript",
     "onLanguage:typescript",
     "onLanguage:java",
-    "onLanguage:c"
+    "onLanguage:c",
+    "onLanguage:markdown",
+    "onFileSystem:config.yml",
+    "onFileSystem:config.yml"
+  ],
+  "extensionPack": [
+    "antfu.browse-lite"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "showCurrentWord",
-        "title": "showCurrentWord"
+        "command": "hugo.stop",
+        "title": "Stop hugo Server"
+      },
+      {
+        "command": "hugo.restart",
+        "title": "Start hugo Server"
+      },
+      {
+        "command": "hugo.open",
+        "title": "Open hugo app"
+      },
+      {
+        "command": "hugo.showCommands",
+        "title": "Show commands",
+        "icon": "$(symbol-event)"
       }
     ]
   },

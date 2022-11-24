@@ -1,10 +1,12 @@
+import { closeTerminal, hugo, start, stop } from "./hugopreview/index";
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from "vscode";
 import { CodeAction } from "./codeaction";
 import { setSelectionCmd, setSelectionHandle } from "./command";
 import { loadPostfixCmp } from "./completion";
-import { currentWord } from "./utils/current_word";
+import { open } from "./hugopreview/open";
+import { showCommands } from "./hugopreview/showCommand";
 
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
@@ -19,10 +21,26 @@ export function activate(context: vscode.ExtensionContext) {
     vscode.commands.registerCommand(setSelectionCmd, setSelectionHandle)
   );
 
+  hugo.ext = context;
   context.subscriptions.push(
-    vscode.commands.registerCommand("showCurrentWord", () => {
-      vscode.window.showInformationMessage(`${currentWord()?.text}`);
+    vscode.commands.registerCommand("hugo.showCommands", () => {
+      showCommands();
     })
+  );
+
+  context.subscriptions.push(
+    vscode.commands.registerCommand("hugo.stop", () => {
+      stop();
+    })
+  );
+  context.subscriptions.push(
+    vscode.commands.registerCommand("hugo.restart", () => {
+      start({});
+    })
+  );
+
+  context.subscriptions.push(
+    vscode.commands.registerCommand("hugo.open", () => open())
   );
 
   ["go", "javascript", "typescript", "c", "rust", "java"].forEach((lang) => {
@@ -37,4 +55,6 @@ export function activate(context: vscode.ExtensionContext) {
 }
 
 // This method is called when your extension is deactivated
-export function deactivate() {}
+export function deactivate() {
+  closeTerminal();
+}

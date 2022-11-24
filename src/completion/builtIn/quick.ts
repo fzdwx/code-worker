@@ -1,7 +1,8 @@
+import { window } from 'vscode';
 import {
   quick,
   QuickTemplate,
-  QuickTemplateDefinition,
+  QuickTemplateDefinition
 } from "../templates/quickTemplate";
 
 const defs: QuickTemplateDefinition[] = [
@@ -220,5 +221,6 @@ const defs: QuickTemplateDefinition[] = [
 ];
 
 export const quickTemplates: QuickTemplate[] = defs.map((def) => {
+  window.showInformationMessage("aaaaaaaaaaaaa");
   return quick(def.lang, def.keyword, def.desc, def.body);
 });
