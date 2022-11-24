@@ -16,8 +16,8 @@ repo: <https://github.com/fzdwx/code-worker>
    - typescript
    - go
 3. postfix
-   - ref -> ${expr}.ref -> &${expr}
-   - ret -> ${expr}.ret -> retrun ${expr}
+   - ref -> `${expr}.ref -> &${expr}`
+   - ret -> `${expr}.ret -> retrun ${expr}`
    - go:
      - fori
      - forr
