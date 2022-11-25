@@ -21,12 +21,14 @@ function getSelectedText(
   let range: vscode.Range;
 
   if (isRangeSimplyCursorPosition(selection)) {
+    // @ts-ignore
     range = getChangeCaseWordRangeAtPosition(document, selection.end);
   } else {
     range = new vscode.Range(selection.start, selection.end);
   }
 
   return {
+    // @ts-ignore
     text: range ? document.getText(range) : undefined,
     range,
   };

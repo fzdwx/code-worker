@@ -6,6 +6,10 @@ file.
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how
 to structure this file.
 
+## 0.0.7 - 2022/11/25
+
+add hugo preview
+
 ## 0.0.6 - 2022/11/24
 
 1.support more postfix 2.add quick template
