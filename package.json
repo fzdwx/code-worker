@@ -1,8 +1,8 @@
 {
   "name": "code-worker",
   "displayName": "code-worker",
-  "description": "helper code. quick fix,extract variables...",
-  "version": "0.0.7",
+  "description": "quickfix,postfix.(like intellij).",
+  "version": "0.0.8",
   "publisher": "fzdwx",
   "repository": {
     "url": "https://github.com/fzdwx/code-worker"

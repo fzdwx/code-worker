@@ -27,7 +27,6 @@ export class CompletionItemBuilder {
     documentation: string | vsc.MarkdownString
   ): CompletionItemBuilder => {
     this.item.documentation = documentation;
-
     return this;
   };
 
