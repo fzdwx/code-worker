@@ -1,4 +1,5 @@
 import {
+  commands,
   ExtensionContext,
   StatusBarAlignment,
   StatusBarItem,
@@ -7,6 +8,8 @@ import {
 } from "vscode";
 import { timeout, waitFor } from "../utils";
 import { Config } from "./config";
+import { open } from "./open";
+import { showCommands } from "./showCommand";
 
 export interface HugoPreview {
   ext: ExtensionContext;
@@ -24,6 +27,30 @@ export const hugo = {
   port: Config.port,
   command: "hugo server -D",
 } as HugoPreview;
+
+export function hugoInit(context: ExtensionContext) {
+  hugo.ext = context;
+  context.subscriptions.push(
+    commands.registerCommand("hugo.showCommands", () => {
+      showCommands();
+    })
+  );
+
+  context.subscriptions.push(
+    commands.registerCommand("hugo.stop", () => {
+      stop();
+    })
+  );
+  context.subscriptions.push(
+    commands.registerCommand("hugo.restart", () => {
+      start({});
+    })
+  );
+
+  context.subscriptions.push(
+    commands.registerCommand("hugo.open", () => open())
+  );
+}
 
 export async function start({ stopPrevious = true }) {
   if (stopPrevious) {
