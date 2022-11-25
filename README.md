@@ -30,6 +30,14 @@ repo: <https://github.com/fzdwx/code-worker>
    - add config:
      `"browse-lite.chromeExecutable": "/usr/bin/google-chrome-stable",`
 
+# show
+
+## postfix preview
+
 ![qwe](./show.gif)
+
+## hugo preview
+
+![qwe](./qwe.png)
 
 **Enjoy!**
