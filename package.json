@@ -2,7 +2,7 @@
   "name": "code-worker",
   "displayName": "code-worker",
   "description": "quickfix,postfix.(like intellij).",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "publisher": "fzdwx",
   "repository": {
     "url": "https://github.com/fzdwx/code-worker"

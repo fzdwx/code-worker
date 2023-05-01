@@ -6,6 +6,10 @@ file.
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how
 to structure this file.
 
+## 0.0.9 - 2023/05/01
+
+rust add struct
+
 ## 0.0.8 - 2022/11/25
 
 fix `ref`

@@ -59,6 +59,7 @@ export const getIndentCharacters = () => {
 export const indent = getIndentCharacters;
 
 export function timeout(ms: number) {
+  //@ts-ignore
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 

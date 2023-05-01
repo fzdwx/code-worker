@@ -212,6 +212,7 @@ const defs: QuickTemplateDefinition[] = [
   { lang: "rust", keyword: "some", desc: "", body: "Some({{expr}})" },
   { lang: "rust", keyword: "err", desc: "", body: " Err({{expr}})" },
   { lang: "rust", keyword: "lambda", desc: "", body: "|| {{expr}}" },
+  { lang: "rust", keyword: "struct", desc: "quick new struct", body: "struct {{expr}} {\n${{indent}}${0}\n}" },
   {
     lang: "rust",
     keyword: "for",
@@ -221,6 +222,5 @@ const defs: QuickTemplateDefinition[] = [
 ];
 
 export const quickTemplates: QuickTemplate[] = defs.map((def) => {
-  window.showInformationMessage("aaaaaaaaaaaaa");
   return quick(def.lang, def.keyword, def.desc, def.body);
 });
